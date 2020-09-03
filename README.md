@@ -1,5 +1,5 @@
 # DeepFaceDrawing: Deep Generation of Face Images from Sketches(Flask version)
-## Prerequisites
+## Things that need to be prepared in advance
 
 1. System
   ```
