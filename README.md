@@ -11,6 +11,8 @@
   ```
   sh install.sh
   ```
+3.rename a figure:
+mv heat/bg.jpg heat/.jpg
 ## How to use
 
 Drawing sketch using DeepFaceDrawing flask. Please download the pre-trained model<a href="https://pan.baidu.com/s/1f1S9t4T5X5J0CDZ7AqTfMg 
