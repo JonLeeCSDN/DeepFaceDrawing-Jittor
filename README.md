@@ -4,8 +4,8 @@
 1. System
   ```
 　- Ubuntu 16.04 or later
-　- NVIDIA GPU + CUDA 9.2(later also can  be sucess)
-  - python 3.7
+　- NVIDIA GPU + CUDA 9.2(later  also can  be sucess)
+   - python 3.7
   ```
 　- install require Packages
   ```
@@ -19,7 +19,7 @@ Drawing sketch using DeepFaceDrawing flask. Please download the pre-trained mode
   ```
   server:
   python3.7 inference.py
-  agent:
+  client:
    python3.7 request.py
   ```
 
