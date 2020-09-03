@@ -4,7 +4,7 @@
 1. System
   ```
 　- Ubuntu 16.04 or later
-　- NVIDIA GPU + CUDA 9.2(later  also can  be sucess)
+　- NVIDIA GPU + CUDA 9.2(later  version also can  be sucess)
     - python 3.7
   ```
 2. install require Packages
