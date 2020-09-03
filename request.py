@@ -22,4 +22,4 @@ def predict_result(image_path,sex=1):
     #print('save  sucess')
     print('spend--',time.time()-start)
 if __name__ =='__main__':
-    predict_result('hand-draw.jpg',sex=1)
+    predict_result('XXXX.jpg',sex=1)
