@@ -11,12 +11,12 @@
   ```
   sh install.sh
   ```
-3.rename a figure:
+ 3.rename a figure:
 ```
 mv heat/bg.jpg heat/.jpg
 ```
 
-4.prepare model file
+ 4.prepare model file
 ```
 Please download the pre-trained model<a href="https://pan.baidu.com/s/1f1S9t4T5X5J0CDZ7AqTfMg 
 " target="_blank">[Baidu(Password:wiu9)]</a> and put those under 'Param'.
