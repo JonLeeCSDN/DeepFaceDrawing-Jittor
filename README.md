@@ -5,9 +5,9 @@
   ```
 　- Ubuntu 16.04 or later
 　- NVIDIA GPU + CUDA 9.2(later  also can  be sucess)
-   - python 3.7
+    - python 3.7
   ```
-　- install require Packages
+2. install require Packages
   ```
   sh install.sh
   ```
