@@ -1,6 +1,7 @@
 # install necessary library
-pip install pyqt5
+pip install flask
 pip install Pillow 
 pip install scipy 
-pip install dominate 
+pip install numpy 
 pip install opencv-python
+pip install jittor
