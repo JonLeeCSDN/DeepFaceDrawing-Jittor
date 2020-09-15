@@ -81,7 +81,8 @@ if __name__ == "__main__":
             shadow_, vector_part[key] = model[key].get_inter(sketch_part[:, :, 0],sample_Num,w_c = part_weight[key],sex=sex)
             print('get_inter model spend--',time.time()-start)
             generated=combine_model.inference(vector_part)
+            ls=base64.b64encode(generated.tobytes())
             print('inference  spend--',time.time()-start)
             #print(generated)
-        return flask.jsonify(generated.tolist())
+        return ls
     app.run(threaded=True)
