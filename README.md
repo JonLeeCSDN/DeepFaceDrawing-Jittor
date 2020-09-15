@@ -22,6 +22,7 @@ Please download the pre-trained model<a href="https://pan.baidu.com/s/1f1S9t4T5X
 " target="_blank">[Baidu(Password:wiu9)]</a> and put those under 'Param'.
  
  5. prepare image file for post in current path
+ 
  size of image is 512X512
 
 ## How to use
