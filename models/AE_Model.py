@@ -164,7 +164,8 @@ class AE_Model(nn.Module):
         vec_mu = np.dot(A_m, xx).T * w_c + (1-w_c)* generated_f
         vec_mu = jt.array(vec_mu.astype('float32'))
 
-        return self.get_shadow_image(A_m.T,xx,nearnN), vec_mu
+        #return self.get_shadow_image(A_m.T,xx,nearnN), vec_mu
+        return  vec_mu
 
     def get_shadow_image(self, mus_mouth, weight, nearnN):
 
