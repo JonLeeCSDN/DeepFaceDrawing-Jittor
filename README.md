@@ -21,9 +21,9 @@ mv heat/bg.jpg heat/.jpg
 Please download the pre-trained model<a href="https://pan.baidu.com/s/1f1S9t4T5X5J0CDZ7AqTfMg 
 " target="_blank">[Baidu(Password:wiu9)]</a> and put those under 'Param'.
  
- 5. prepare image file for post in current path
+ 5. prepare sketch image file for post in current path
  
- size of image is 512X512
+ size of sketch image is 512X512
 
 ## How to use
 server:
