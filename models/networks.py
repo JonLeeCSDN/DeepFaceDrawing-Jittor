@@ -430,6 +430,7 @@ class GANLoss(nn.Module):
                 target_tensor = self.get_target_tensor(pred, target_is_real)
                 loss += self.loss(pred, target_tensor)
             return loss
+        
         else:
             target_tensor = self.get_target_tensor(input[(- 1)], target_is_real)
             return self.loss(input[(- 1)], target_tensor)
