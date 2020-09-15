@@ -3,23 +3,30 @@ import requests
 import time
 import cv2
 import  numpy as np
+import gevent
+import base64
 URL = 'http://127.0.0.1:5000/predict'
 
-def predict_result(image_path,sex=1):
+def predict_result(image_path,sex=2):
     start=time.time()
-    img = open(image_path,'rb').read()
+    f = open(image_path,'rb')
+    ls_f=base64.b64encode(f.read())
+    data = {'image':ls_f, 'sex':sex}
     print('spend--',time.time()-start)
-    msg = {'image':img}
-    data={'sex':sex}
-    r = requests.post(URL,files=msg,data=data)
-    print('post spend--',time.time()-start)
-    #print(r.url)
-    r = r.json()
-    r=np.array(r).astype(np.uint8)
-    #print('sucess',r)
+    r = requests.post(URL,data=data)
+    #print(r.text)
     print('spend--',time.time()-start)
-    cv2.imwrite('result/'+str(int(time.time()))+'.jpg',cv2.cvtColor(r, cv2.COLOR_BGR2RGB))
-    #print('save  sucess')
+    r =np.fromstring(base64.b64decode(r.text), np.uint8)
+    r=r.reshape(512,512,3)
+    print(r.shape)
     print('spend--',time.time()-start)
+    print('spend--',time.time()-start)
+    f.close()
+    cv2.imwrite(str(int(time.time()))+'.jpg',cv2.cvtColor(r, cv2.COLOR_BGR2RGB))
+    
 if __name__ =='__main__':
-    predict_result('XXXX.jpg',sex=1)
+    #start=time.time()
+    run_gevent_list = []
+    for i in range(10):
+        run_gevent_list.append(gevent.spawn(predict_result('hand-draw.jpg',sex=0)))
+    gevent.joinall(run_gevent_list)
