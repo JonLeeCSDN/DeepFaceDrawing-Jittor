@@ -48,7 +48,8 @@ if __name__ == "__main__":
     def predict():
         if request.method == 'POST':
             start=time.time()
-            img = request.files['image'].read()
+            img = request.form.getlist('image')[0]
+            img=base64.b64decode(img)
             print('read spend--',time.time()-start)
             #print(request.form.getlist('sex'))
             sex=int(request.form.getlist('sex')[0])
